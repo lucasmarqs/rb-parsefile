@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'jobs_importer'
+
+if ARGV.size != 1
+  raise ArgumentError, "You must inform a valid file which contain jobs information"
+end
+
+JobsImporter::CLI.new(ARGV[0])
